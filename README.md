@@ -1,4 +1,4 @@
-This PHP script provides a basic function to calculate points awarded in a <a href="https://www.fencingtip.com">Fencing</a>fencing bout. It considers different touch types and optionally applies logic for handling offender penalties.
+This PHP script provides a basic function to calculate points awarded in a <a href="https://www.fencingtip.com">Fencing</a> bout. It considers different touch types and optionally applies logic for handling offender penalties.
 
 Features:
 
