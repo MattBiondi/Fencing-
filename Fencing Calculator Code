@@ -1,0 +1,37 @@
+<?php
+
+function calculateFencingPoints($touchType, $fencer) {
+  // Define point values for different touch types
+  $pointValues = [
+    "Touch" => 1,
+    "Double Touch" => 2,
+    "Riposte" => 1,
+    "Penalty Touch" => 1,
+  ];
+
+  // Check if touch type is valid
+  if (!array_key_exists($touchType, $pointValues)) {
+    throw new InvalidArgumentException("Invalid touch type: $touchType");
+  }
+
+  // Award points based on touch type
+  $points = $pointValues[$touchType];
+
+  // Apply additional logic based on fencer (optional)
+  if ($fencer === "Offender") {
+    // Penalty for offender touch (e.g., out of bounds)
+    $points = 0;
+  } 
+
+  return $points;
+}
+
+// Example usage
+$touchType = "Touch";
+$fencer = "Attacker";
+
+$points = calculateFencingPoints($touchType, $fencer);
+
+echo "Points awarded: $points";
+
+?>
